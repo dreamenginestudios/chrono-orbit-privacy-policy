@@ -43,7 +43,7 @@
 <div id="lang-uk">
 
 <h1>Політика конфіденційності — Chrono Orbit</h1>
-<p class="updated">Дата останнього оновлення: 11 липня 2026 р.</p>
+<p class="updated">Дата останнього оновлення: 18 жовтня 2026 р.</p>
 <p>Розробник: Dream Engine Studios (фізична особа)</p>
 
 <p>Ця Політика конфіденційності описує, які дані збирає мобільна гра
@@ -54,60 +54,80 @@
 <table>
 <tr><th>Тип даних</th><th>Джерело</th><th>Мета використання</th></tr>
 <tr><td>Анонімний ідентифікатор користувача</td><td>Firebase Authentication (Anonymous Auth)</td><td>Прив'язка прогресу гри до пристрою без реєстрації</td></tr>
-<tr><td>Ігровий прогрес (рівні, валюта, налаштування)</td><td>Firebase Firestore</td><td>Збереження та синхронізація прогресу гри</td></tr>
-<tr><td>Знеособлена статистика використання (сеанси, події в грі, тривалість)</td><td>Firebase Analytics</td><td>Аналіз залученості гравців та покращення Додатку</td></tr>
-<tr><td>Рекламний ідентифікатор пристрою (Advertising ID), дані для персоналізації реклами</td><td>Google AdMob</td><td>Показ рекламних оголошень (банерна, винагороджувана, міжсторінкова реклама)</td></tr>
+<tr><td>Дані облікового запису Google (лише якщо ви самі входите через Google): адреса email та ім'я акаунта</td><td>Firebase Authentication / Google Sign-In</td><td>Відновлення прогресу на іншому пристрої. Інші гравці їх не бачать</td></tr>
+<tr><td>Ігровий прогрес і профіль: валюта, покращення, скіни, місії, рекорди, нікнейм, належність до клану, налаштування</td><td>Firebase Firestore та наш власний сервер</td><td>Збереження й синхронізація прогресу, таблиця лідерів, клани</td></tr>
+<tr><td>Повідомлення чату (текст до 300 символів), нікнейм та клан — видимі іншим гравцям</td><td>Наш власний сервер (з архівною копією у Firebase Firestore)</td><td>Чат гравців і кланів</td></tr>
+<tr><td>Інформація про покупки (які покупки активні)</td><td>Google Play Billing</td><td>Видача придбаного. Платіжні дані (картка тощо) до нас не потрапляють</td></tr>
+<tr><td>Досягнення (за бажанням)</td><td>Google Play Games Services</td><td>Розблокування досягнень у Google Play Games</td></tr>
+<tr><td>Джерело встановлення (кампанія, з якої ви прийшли)</td><td>Google Play Install Referrer</td><td>Оцінка ефективності реклами</td></tr>
+<tr><td>Дані привʼязаного Discord (лише якщо ви самі привʼязали): ідентифікатор і аватар</td><td>Discord OAuth</td><td>Показ вашого аватара в чаті</td></tr>
+<tr><td>Рекламний ідентифікатор, IP-адреса, дані пристрою</td><td>Google AdMob та рекламні партнери (див. розділ 2)</td><td>Показ реклами</td></tr>
+<tr><td>Технічні журнали (логи): версія гри, модель пристрою й версія Android, анонімний ідентифікатор, технічні рядки про помилки та збої гри</td><td>Додаток → наш власний сервер</td><td>Виявлення й виправлення помилок. Зберігаються 14 днів. Не містять імен, email, паролів і тексту чату</td></tr>
 </table>
+<p>Ми не збираємо ваш номер телефону, точне місцезнаходження, контакти чи файли.
+Ім'я та email доступні нам лише в межах входу через Google (обробляє Firebase Authentication)
+і лише якщо ви обрали такий вхід.</p>
 
-<p>Додаток <strong>не збирає</strong> ваше ім'я, email, номер телефону чи іншу
-особисто ідентифіковану інформацію, окрім автоматично згенерованого анонімного ID.</p>
-
-<h2>2. Реклама (Google AdMob)</h2>
-<p>Додаток використовує Google AdMob для показу реклами. AdMob може збирати та
-обробляти дані пристрою (рекламний ідентифікатор, IP-адресу, наближену геолокацію)
-з метою показу релевантної реклами. Для користувачів з ЄЕЗ, Великої Британії та
-Швейцарії показується запит на згоду відповідно до вимог GDPR перед показом
-персоналізованої реклами.</p>
-<p>Детальніше про те, як Google обробляє дані:
-<a href="https://policies.google.com/technologies/partner-sites" target="_blank">policies.google.com/technologies/partner-sites</a></p>
+<h2>2. Реклама (Google AdMob та рекламні партнери)</h2>
+<p>Додаток використовує Google AdMob для показу реклами. Через медіацію AdMob
+реклама також може надходити від партнерів
+<strong>Unity Ads</strong> (Unity Technologies) та <strong>Liftoff</strong> (Vungle).
+Вони можуть обробляти дані пристрою (рекламний ідентифікатор, IP-адресу,
+приблизне місцезнаходження) для показу доречної реклами та вимірювання її ефективності.
+Для користувачів ЄЕЗ, Великої Британії та Швейцарії перед персоналізованою рекламою
+показується запит на згоду (GDPR); змінити вибір можна в налаштуваннях гри
+("Параметри конфіденційності"), а рекламний ідентифікатор — скинути чи вимкнути
+в налаштуваннях Android.</p>
+<p>Докладніше:
+<br>Google: policies.google.com/technologies/partner-sites
+<br>Unity: unity.com/legal/privacy-policy
+<br>Liftoff: liftoff.io/privacy-policy</p>
 
 <h2>3. Зберігання та захист даних</h2>
-<p>Ігровий прогрес зберігається у хмарній базі даних Firebase Firestore (Google Cloud,
-регіон Європа). Доступ до власних даних гравця обмежений правилами безпеки Firestore
-(Firestore Security Rules) — кожен гравець має доступ лише до свого власного запису.</p>
+<p>Ігровий прогрес зберігається в хмарній базі Firebase Firestore (Google Cloud, регіон Європа)
+і на нашому власному сервері, розміщеному в хостинг-провайдера Contabo GmbH (дата-центр у Франції).
+Передача даних між Додатком і сервером відбувається через захищене з'єднання (HTTPS).
+Доступ до даних гравця обмежений правилами безпеки; кожен гравець має доступ лише до свого запису.</p>
 
 <h2>4. Передача даних третім сторонам</h2>
-<p>Ми не продаємо і не передаємо особисті дані третім сторонам, окрім постачальників
-послуг, необхідних для функціонування Додатку:</p>
+<p>Ми не продаємо персональні дані. Ми передаємо дані лише постачальникам послуг,
+необхідним для роботи Додатка:</p>
 <ul>
-  <li>Google Firebase (хостинг бекенду, автентифікація, база даних, аналітика)</li>
-  <li>Google AdMob (показ реклами)</li>
+<li>Google (Firebase — автентифікація й база даних; AdMob — реклама; Google Play — покупки та Play Games)</li>
+<li>Unity Technologies (Unity Ads) та Liftoff (Vungle) — рекламні партнери</li>
+<li>Contabo GmbH — хостинг нашого сервера</li>
+<li>Discord Inc. — лише якщо ви привʼязали Discord</li>
 </ul>
 
 <h2>5. Діти</h2>
-<p>Додаток не призначений спеціально для дітей віком до 13 років. Ми не збираємо
-свідомо особисту інформацію дітей. Якщо ви вважаєте, що дитина надала нам особисту
-інформацію, зв'яжіться з нами для видалення таких даних.</p>
+<p>Додаток не призначений спеціально для дітей віком до 13 років. Ми свідомо не збираємо
+персональні дані дітей. Якщо ви вважаєте, що дитина надала нам персональну
+інформацію, зв'яжіться з нами, щоб її було видалено.</p>
 
-<h2>6. Ваші права</h2>
-<p>Ви можете видалити свій ігровий прогрес, видаливши Додаток з пристрою.
-Оскільки використовується анонімна автентифікація без прив'язки до email,
-відновлення даних після видалення Додатку неможливе.</p>
+<h2>6. Зберігання даних і ваші права</h2>
+<p>Дані прогресу зберігаються, доки ви користуєтеся грою або доки ви не попросите їх видалити.
+Технічні журнали зберігаються 14 днів і видаляються автоматично.</p>
+<p>Видалення Додатка з пристрою видаляє лише локальні дані, але не копію на нашому сервері.
+Ви можете у будь-який час попросити видалити ваші дані (прогрес, нікнейм, лідерборд, клан,
+повідомлення чату, журнали), а також отримати доступ до даних чи виправити їх.
+Як це зробити: <a href="data-deletion.html">сторінка запиту на видалення даних</a>.
+Для користувачів ЄЕЗ діють права за GDPR: доступ, виправлення, видалення, обмеження обробки,
+заперечення проти обробки та скарга до наглядового органу.</p>
 
 <h2>7. Зміни до цієї Політики</h2>
-<p>Ми можемо періодично оновлювати цю Політику конфіденційності. Дата останнього
-оновлення вказана вгорі сторінки.</p>
+<p>Ми можемо час від часу оновлювати цю Політику. Дата останнього оновлення
+вказана вгорі сторінки.</p>
 
 <h2>8. Контакти</h2>
 <p>З питань щодо цієї Політики конфіденційності звертайтесь:
-<br>Email: dream.engine.studios@gmail.com</p>
+<br>Email: dream.engine.studios.de@gmail.com</p>
 
 </div>
 
 <div id="lang-en">
 
 <h1>Privacy Policy — Chrono Orbit</h1>
-<p class="updated">Last updated: July 11, 2026</p>
+<p class="updated">Last updated: October 18, 2026</p>
 <p>Developer: Dream Engine Studios (individual developer)</p>
 
 <p>This Privacy Policy describes what data the mobile game
@@ -118,34 +138,47 @@ By using the App, you agree to this Policy.</p>
 <table>
 <tr><th>Data Type</th><th>Source</th><th>Purpose</th></tr>
 <tr><td>Anonymous user identifier</td><td>Firebase Authentication (Anonymous Auth)</td><td>Linking game progress to the device without registration</td></tr>
-<tr><td>Game progress (levels, currency, settings)</td><td>Firebase Firestore</td><td>Saving and syncing game progress</td></tr>
-<tr><td>Anonymized usage statistics (sessions, in-game events, duration)</td><td>Firebase Analytics</td><td>Analyzing player engagement and improving the App</td></tr>
-<tr><td>Advertising identifier, ad personalization data</td><td>Google AdMob</td><td>Displaying ads (banner, rewarded, interstitial)</td></tr>
+<tr><td>Google account data (only if you choose to sign in with Google): email address and account name</td><td>Firebase Authentication / Google Sign-In</td><td>Restoring progress on another device. Other players cannot see them</td></tr>
+<tr><td>Game progress and profile: currency, upgrades, skins, missions, records, nickname, clan membership, settings</td><td>Firebase Firestore and our own server</td><td>Saving and syncing progress, leaderboard, clans</td></tr>
+<tr><td>Chat messages (text up to 300 characters), nickname and clan — visible to other players</td><td>Our own server (with an archive copy in Firebase Firestore)</td><td>Player and clan chat</td></tr>
+<tr><td>Purchase information (which purchases are active)</td><td>Google Play Billing</td><td>Delivering purchased items. Payment details (card, etc.) never reach us</td></tr>
+<tr><td>Achievements (optional)</td><td>Google Play Games Services</td><td>Unlocking achievements in Google Play Games</td></tr>
+<tr><td>Install source (the campaign you came from)</td><td>Google Play Install Referrer</td><td>Measuring advertising effectiveness</td></tr>
+<tr><td>Linked Discord data (only if you link it yourself): identifier and avatar</td><td>Discord OAuth</td><td>Showing your avatar in chat</td></tr>
+<tr><td>Advertising identifier, IP address, device data</td><td>Google AdMob and advertising partners (see section 2)</td><td>Displaying ads</td></tr>
+<tr><td>Technical logs: game version, device model and Android version, anonymous identifier, technical lines about game errors and crashes</td><td>The App → our own server</td><td>Finding and fixing bugs. Kept for 14 days. They contain no names, emails, passwords or chat text</td></tr>
 </table>
+<p>We do not collect your phone number, precise location, contacts or files.
+Your name and email are available to us only as part of Google sign-in
+(processed by Firebase Authentication) and only if you choose that sign-in.</p>
 
-<p>The App does <strong>not</strong> collect your name, email, phone number, or other
-personally identifiable information, other than an automatically generated
-anonymous ID.</p>
-
-<h2>2. Advertising (Google AdMob)</h2>
-<p>The App uses Google AdMob to display ads. AdMob may collect and process device
-data (advertising ID, IP address, approximate location) to serve relevant ads.
-For users in the EEA, UK, and Switzerland, a GDPR consent request is shown before
-personalized ads are displayed.</p>
-<p>More on how Google processes data:
-<a href="https://policies.google.com/technologies/partner-sites" target="_blank">policies.google.com/technologies/partner-sites</a></p>
+<h2>2. Advertising (Google AdMob and advertising partners)</h2>
+<p>The App uses Google AdMob to display ads. Through AdMob mediation, ads may also be
+served by partners <strong>Unity Ads</strong> (Unity Technologies) and <strong>Liftoff</strong> (Vungle).
+They may process device data (advertising ID, IP address, approximate location)
+to serve relevant ads and measure their performance. For users in the EEA, UK, and
+Switzerland, a GDPR consent request is shown before personalized ads are displayed;
+you can change your choice in the game's settings ("Privacy options"), and you can reset
+or disable the advertising ID in Android settings.</p>
+<p>More information:
+<br>Google: policies.google.com/technologies/partner-sites
+<br>Unity: unity.com/legal/privacy-policy
+<br>Liftoff: liftoff.io/privacy-policy</p>
 
 <h2>3. Data Storage and Security</h2>
-<p>Game progress is stored in the Firebase Firestore cloud database (Google Cloud,
-Europe region). Access to a player's own data is restricted by Firestore Security
-Rules — each player can only access their own record.</p>
+<p>Game progress is stored in the Firebase Firestore cloud database (Google Cloud, Europe region)
+and on our own server hosted by Contabo GmbH (data center in France).
+Data is transmitted between the App and our server over a secure connection (HTTPS).
+Access to a player's data is restricted by security rules — each player can only access their own record.</p>
 
 <h2>4. Third-Party Data Sharing</h2>
-<p>We do not sell or share personal data with third parties, except for service
-providers necessary for the App to function:</p>
+<p>We do not sell personal data. We share data only with service providers necessary
+for the App to function:</p>
 <ul>
-  <li>Google Firebase (backend hosting, authentication, database, analytics)</li>
-  <li>Google AdMob (advertising)</li>
+<li>Google (Firebase — authentication and database; AdMob — advertising; Google Play — purchases and Play Games)</li>
+<li>Unity Technologies (Unity Ads) and Liftoff (Vungle) — advertising partners</li>
+<li>Contabo GmbH — hosting of our server</li>
+<li>Discord Inc. — only if you link Discord</li>
 </ul>
 
 <h2>5. Children</h2>
@@ -153,10 +186,15 @@ providers necessary for the App to function:</p>
 collect personal information from children. If you believe a child has provided
 us with personal information, please contact us to have it removed.</p>
 
-<h2>6. Your Rights</h2>
-<p>You may delete your game progress by uninstalling the App. Since anonymous
-authentication is used without an email link, data recovery after uninstalling
-is not possible.</p>
+<h2>6. Data Retention and Your Rights</h2>
+<p>Progress data is kept while you use the game or until you ask us to delete it.
+Technical logs are kept for 14 days and deleted automatically.</p>
+<p>Uninstalling the App removes only local data, not the copy on our server.
+You can ask us at any time to delete your data (progress, nickname, leaderboard, clan,
+chat messages, logs), and to access or correct it.
+How to do this: <a href="data-deletion.html">data deletion request page</a>.
+For users in the EEA, GDPR rights apply: access, rectification, erasure, restriction of processing,
+objection, and the right to complain to a supervisory authority.</p>
 
 <h2>7. Changes to This Policy</h2>
 <p>We may update this Privacy Policy from time to time. The date of the latest
@@ -164,7 +202,7 @@ update is shown at the top of this page.</p>
 
 <h2>8. Contact</h2>
 <p>For questions about this Privacy Policy, contact us at:
-<br>Email: dream.engine.studios@gmail.com</p>
+<br>Email: dream.engine.studios.de@gmail.com</p>
 
 </div>
 
